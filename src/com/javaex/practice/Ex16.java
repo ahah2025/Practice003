@@ -5,51 +5,29 @@ import java.util.Scanner;
 public class Ex16 {
 
 	public static void main(String[] args) {
-		// 5의 배수 개수 : 5,10,15,20 => 4개
-		// 5의 배수 합 : 5+10+15+20 => 50
 		
+		int inputNum;
+		int count=0;
+		int sum=0;
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.print("숫자를 입력하세요: ");
+		inputNum = sc.nextInt();
 		
-		while(true) {
-			System.out.print("숫자를 입력하세요: ");
-			int a = sc.nextInt();
+		for(int i=1; i<=inputNum; i++) {
 			
-			if(a == 22) {
-				System.out.println("5의 배수의 개수: "+4);
-				System.out.println("5의 배수의 합 : "+(5+10+15+20));
-				break;
-			}else if(a == 24) {
-				System.out.println("5의 배수의 개수: "+ 4);
-				System.out.println("5의 배수의 합 : "+ (5+10+15+20));
-				break;
-			}else if(a == 25) {
-				System.out.println("5의 배수의 개수: "+ 5);
-				System.out.println("5의 배수의 합 : "+ (5+10+15+20+25));
-				break;
-			}else if(a == 52) {
-				System.out.println("5의 배수의 개수: "+ 10);
-				System.out.println("5의 배수의 합 : "+ (5+10+15+20+25+30+35+40+45+50));
-				break;
+			//5의 배수일때
+			if(i%5 == 0) {
+				//개수 count
+				count++; //count=count+1,  count+=1
+				
+				//합 sum
+				sum = sum + i;
 			}
 		}
-			sc.close();
+		System.out.println("5의배수의 개수: " + count);
+		System.out.println("5의배수의 합  : " + sum);
+		sc.close();
+		
 	}			
 }
-/*
-숫자를 입력하세요: 22
-5의 배수의 개수: 4
-5의 배수의 합 : 50
-
-숫자를 입력하세요: 24
-5의 배수의 개수: 4
-5의 배수의 합 : 50
-
-숫자를 입력하세요: 25
-5의 배수의 개수: 5
-5의 배수의 합 : 75
-
-숫자를 입력하세요: 52
-5의 배수의 개수: 10
-5의 배수의 합 : 275
-*/
