@@ -1,32 +1,26 @@
 package com.javaex.practice;
 
+import java.util.Scanner;
+
 public class Ex07 {
 
 	public static void main(String[] args) {
 		
 		//모르겠음 정답 입력이 다르게 나옴
 		
+		Scanner sc = new Scanner(System.in);
 		System.out.println("숫자를 입력하세요");
-		int s = 1;
+		int num = sc.nextInt();
 		
-		for(s = 1;s<=3;s++ ) {
-			for(int x = 1; x<=s ; x++) {
-				System.out.println(s);
-			
+		for(int i=1; i<=num; i++){
+			for(int j=1; j<=i; j++){
+				System.out.print(i);
 			}
-			System.out.println("2");
+			System.out.println("");
 		}
+		
+		
+		sc.close();
+		
 	}
 }
-/*
-숫자를 입력하세요
-1
-2
-2
-2
-2
-3
-3
-3
-2
-*/
